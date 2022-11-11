@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header class="header">
       <!-- Верхня смуга з сторінками поштою і телефоном -->
@@ -24,10 +25,10 @@
             ><span class="contrast">Web</span>Studio</a
           >
           <ul class="nav-list header-container pages">
-            <li>
-              <a href="./index.html" class="nav-item contrast link">Студія</a>
+            <li class="header-item">
+              <a href="./index.html" class="nav-item header-item-page contrast link">Студія</a>
             </li>
-            <li>
+            <li class="header-item">
               <a
                 href="./portfolio.html"
                 rel="noreferrer noopener"
@@ -35,8 +36,8 @@
                 >Портфоліо</a
               >
             </li>
-            <li>
-              <a href="./contact" class="nav-item grey link">Контакти</a>
+            <li class="header-item">
+              <a href="./contact.html" class="nav-item grey link">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -61,16 +62,18 @@
     </header>
 
     <main>
-      <!--Сіра частина з кнопкою-->
+
+      <!--HERO-->
       <section class="section hero">
         <div class="container">
           <h1 class="hero-title white">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">
+          <button type="button" class="button" data-modal-open>
             <span class="button-text white">Замовити послугу</span>
           </button>
         </div>
       </section>
-      <!--Короткий опис список-->
+
+      <!--Якості-->
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Якості</h2>
@@ -127,39 +130,50 @@
           </ul>
         </div>
       </section>
-      <!--Блок Чим ми займаємось з картинками-->
+
+      <!--Чим ми займаємось-->
       <section class="section about">
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="nav-list flexbox-list section-margin">
-            <li>
+            <li class="about-item">
               <img
                 src="./images/img1.jpg"
-                alt="Програміст працює"
+                alt="Десктопні додатки"
                 width="370"
                 height="294"
               />
+              <div class="overlay-about">
+                <h3 class="overlay-about-text">Десктопні додатки</h3>
+              </div>
             </li>
-            <li>
+            <li class="about-item">
               <img
                 src="./images/img2.jpg"
-                alt="Веб-дизайнер працює"
+                alt="Мобільні додатки"
                 width="370"
                 height="294"
               />
+              <div class="overlay-about">
+                <h3 class="overlay-about-text">Мобільні додатки</h3>
+              </div>
             </li>
-            <li>
+            <li class="about-item">
               <img
                 src="./images/img3.jpg"
-                alt="Креативний дизайнер з кольоровою гамою"
+                alt="Дизайнерські рішення"
                 width="370"
                 height="294"
               />
+              <div class="overlay-about">
+                <h3 class="overlay-about-text">Дизайнерські рішення</h3>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-      <!--Наша команда, фото, імена, посади-->
+
+      <!--Наша команда-->
       <section class="section-team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -335,6 +349,8 @@
           </ul>
         </div>
       </section>
+
+      <!-- Постійні клієнти -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постійні клієнти</h2>
@@ -384,9 +400,9 @@
           </ul>
         </div>
       </section>
+
     </main>
 
-    <!--Футер, адреса, пошта, телефон-->
     <footer class="footer">
       <div class="container footer-flex">
         <div>
@@ -443,5 +459,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" data-modal-close>
+          <svg class="modal-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
