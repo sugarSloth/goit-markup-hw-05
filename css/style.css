@@ -65,6 +65,7 @@ img {
 /*Лінки без підкреслення*/
 .link {
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover, .link:focus {
@@ -136,7 +137,7 @@ img {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 2px;
     transform: translateX(-50%) scale(1);
     display: block;
     width: 105%;
@@ -172,11 +173,6 @@ img {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-/*Логотип хедер паддінги*/
-.logo-header{
-    padding: 24px 0;
 }
 
 /*Відступ між сторінками і контактами хедер*/
@@ -230,10 +226,11 @@ img {
     padding: 10px 32px;
     margin-top: 30px;
     border: 0;
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .button:focus, .button:hover{
     cursor: pointer;
+    background: rgba(24, 140, 232, 1);
 }
 
 /* Замовити послугу текст на кнопці */
@@ -304,12 +301,12 @@ img {
 .overlay-about{
     position: absolute;
     bottom: 0;
-    padding: 27px 0;
     height: 70px;
     width: 100%;
     background-color: rgba(47, 48, 58, 0.8);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .overlay-about-text{
@@ -341,6 +338,7 @@ img {
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:focus,
@@ -405,6 +403,7 @@ img {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .permanent_items:focus, .permanent_items:hover{
@@ -435,6 +434,7 @@ img {
     border: 0;
     padding: 6px 22px;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons-portfolio:focus, .buttons-portfolio:hover{
@@ -475,6 +475,7 @@ img {
 .portfolio-list {
     flex-basis: calc((100% - 60px) / 3);
     border: 1px solid #EEEEEE;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list:focus,
@@ -486,6 +487,13 @@ img {
 .project-div-overlay{
     position: relative;
     overflow: hidden;
+}
+
+.project-overlay-text{
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+    color: var(--white);
 }
 
 /*Заголовки портфоліо*/
@@ -520,6 +528,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -589,6 +598,7 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--white);
     margin-top: 20px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-items-footer:focus, .contacts-items-footer:hover{
@@ -605,7 +615,9 @@ img {
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.2);;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), ;
 }
 
 .backdrop.is-hidden{
@@ -618,7 +630,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
+    scale: 1;
     width: 528px;
     min-height: 581px;
     background-color: var(--white);
